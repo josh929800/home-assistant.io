@@ -93,6 +93,11 @@ upnp_bind_multicast:
   required: false
   type: boolean
   default: true
+lights_all_dimmable: 
+  description: Some Alexa deices do not recognize On/Off Hue ligths they excpect all lights to be dimmable. If your device responds "Sorry, [name of light] is not responding" when changing a light with emulated_hue. Setting 'lights_all_dimmable: true' should fix this issue by changing the responce to your device.
+  required: false
+  type: boolean
+  default: false
 off_maps_to_on_domains:
   description: The domains that maps an "off" command to an "on" command. For example, if `script` is included in the list, and you ask Alexa to "turn off the *water plants* script," the command will be handled as if you asked her to turn on the script.
   required: false
